@@ -2,7 +2,13 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        "sweetgreen-yellow": "rgb(244, 243, 231)",
+        "sweetgreen-black": "rgb(14, 21, 14)",
+        "sweetgreen-green-primary": "rgb(0, 71, 60)",
+      },
+    },
   },
   plugins: [],
 };
