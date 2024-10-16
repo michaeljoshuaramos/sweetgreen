@@ -3,7 +3,7 @@ import featuredProduct from "../assets/SG_Web_Harvest_Desktop.webp";
 const Landing = () => {
   return (
     <div
-      className="bg-cover bg-center h-[60vh]"
+      className="bg-cover bg-center h-[90vh]"
       style={{ backgroundImage: `url(${featuredProduct})` }}
     ></div>
   );

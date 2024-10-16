@@ -3,7 +3,7 @@ import { links } from "../utils";
 
 const NavigationBar = () => {
   return (
-    <nav className="p-10">
+    <nav className="p-5">
       <div className="flex gap-x-10 justify-center">
         {links.map((link) => {
           return (
