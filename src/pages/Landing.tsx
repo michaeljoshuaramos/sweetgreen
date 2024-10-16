@@ -1,6 +1,10 @@
 import sweetgreenHero from "../assets/sweetgreenHero.webp";
-import { MenuItemCard, SweetpassSection } from "../components/";
-import { menu } from "../utils/menu";
+import {
+  MenuItemCard,
+  SweetgreenWorkSection,
+  SweetpassSection,
+} from "../components/";
+import { menu } from "../utils/";
 
 const Landing = () => {
   return (
@@ -20,6 +24,44 @@ const Landing = () => {
         </div>
       </div>
       <SweetpassSection />
+      <SweetgreenWorkSection />
+      <div className="max-w-[1400px] mx-auto my-12">
+        <div className="grid grid-cols-3">
+          <div>
+            <section>
+              <p>Good Morning America</p>
+              <p>Naomi Osaka joins sweetgreen as youngest investor</p>
+              <p>
+                Discover what our collab means for the future of fast food…
+                <br />
+                <span>Read more →</span>
+              </p>
+            </section>
+          </div>
+          <div>
+            <section>
+              <p>Good Morning America</p>
+              <p>Naomi Osaka joins sweetgreen as youngest investor</p>
+              <p>
+                Discover what our collab means for the future of fast food…
+                <br />
+                <span>Read more →</span>
+              </p>
+            </section>
+          </div>
+          <div>
+            <section>
+              <p>Good Morning America</p>
+              <p>Naomi Osaka joins sweetgreen as youngest investor</p>
+              <p>
+                Discover what our collab means for the future of fast food…
+                <br />
+                <span>Read more →</span>
+              </p>
+            </section>
+          </div>
+        </div>
+      </div>
     </>
   );
 };
