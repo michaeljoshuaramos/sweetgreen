@@ -3,7 +3,7 @@ type Link = {
   label: string;
 };
 
-export const links: Link[] = [
+export const linksLeft: Link[] = [
   {
     href: "/",
     label: "Home",
@@ -11,5 +11,16 @@ export const links: Link[] = [
   {
     href: "/menu",
     label: "Our Menu",
+  },
+];
+
+export const linksRight: Link[] = [
+  {
+    href: "/locations",
+    label: "Our Locations",
+  },
+  {
+    href: "/cart",
+    label: "Cart",
   },
 ];
