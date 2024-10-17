@@ -1,11 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import {
-  FilterOptions,
-  Footer,
-  MenuItemCard,
-  NewsletterSection,
-} from "../components";
+import { FilterOptions, MenuItemCard } from "../components";
 import { menu } from "../utils";
 
 const Menu = () => {
@@ -37,8 +32,6 @@ const Menu = () => {
             })}
         </div>
       </div>
-      <NewsletterSection />
-      <Footer />
     </div>
   );
 };
