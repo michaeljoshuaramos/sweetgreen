@@ -8,6 +8,7 @@ export { default as NavigationBar } from "./NavigationBar";
 export { default as NewsCard } from "./NewsCard";
 export { default as NewsletterSection } from "./NewsletterSection";
 export { default as NewsSection } from "./NewsSection";
+export { default as StarIcon } from "./StarIcon";
 export { default as SuggestionSection } from "./SuggestionSection";
 export { default as SweetgreenWorkSection } from "./SweetgreenWorkSection";
 export { default as SweetpassSection } from "./SweetpassSection";
