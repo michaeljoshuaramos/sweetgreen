@@ -1,8 +1,6 @@
 import {
   BestSellersSection,
-  Footer,
   MainHeroSection,
-  NewsletterSection,
   NewsSection,
   SweetgreenWorkSection,
   SweetpassSection,
@@ -16,8 +14,6 @@ const Landing = () => {
       <SweetpassSection />
       <SweetgreenWorkSection />
       <NewsSection />
-      <NewsletterSection />
-      <Footer />
     </>
   );
 };
