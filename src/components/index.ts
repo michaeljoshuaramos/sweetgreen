@@ -1,5 +1,7 @@
+export { default as BestSellersSection } from "./BestSellersSection";
 export { default as FilterOptions } from "./FilterOptions";
 export { default as Footer } from "./Footer";
+export { default as MainHeroSection } from "./MainHeroSection";
 export { default as MenuItemCard } from "./MenuItemCard";
 export { default as NavigationBar } from "./NavigationBar";
 export { default as NewsCard } from "./NewsCard";
