@@ -1,5 +1,5 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { Landing, Layout } from "./pages";
+import { Landing, Layout, Menu } from "./pages";
 
 const router = createBrowserRouter([
   {
@@ -13,7 +13,7 @@ const router = createBrowserRouter([
       },
       {
         path: "menu",
-        element: <div>Menu</div>,
+        element: <Menu />,
       },
       {
         path: "menu/:name",

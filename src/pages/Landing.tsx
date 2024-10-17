@@ -3,10 +3,10 @@ import {
   Footer,
   MenuItemCard,
   NewsletterSection,
+  NewsSection,
   SweetgreenWorkSection,
   SweetpassSection,
 } from "../components/";
-import NewsSection from "../components/NewsSection";
 import { menu } from "../utils/";
 
 const Landing = () => {

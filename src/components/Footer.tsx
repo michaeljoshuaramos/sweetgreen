@@ -8,7 +8,7 @@ const Footer = () => {
           <div>
             <p className="uppercase mb-4">{footer[0].category}</p>
             {footer[0].links.map((link) => (
-              <p>
+              <p key={link}>
                 <a>{link}</a>
               </p>
             ))}
@@ -16,7 +16,7 @@ const Footer = () => {
           <div>
             <p className="uppercase mb-4">{footer[1].category}</p>
             {footer[1].links.map((link) => (
-              <p>
+              <p key={link}>
                 <a>{link}</a>
               </p>
             ))}
@@ -24,7 +24,7 @@ const Footer = () => {
           <div>
             <p className="uppercase mb-4">{footer[2].category}</p>
             {footer[2].links.map((link) => (
-              <p>
+              <p key={link}>
                 <a>{link}</a>
               </p>
             ))}
@@ -32,7 +32,7 @@ const Footer = () => {
           <div>
             <p className="uppercase mb-4">{footer[3].category}</p>
             {footer[3].links.map((link) => (
-              <p>
+              <p key={link}>
                 <a>{link}</a>
               </p>
             ))}
