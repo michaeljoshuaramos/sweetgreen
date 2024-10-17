@@ -1,5 +1,5 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { Landing, Layout, Menu } from "./pages";
+import { Landing, Layout, Menu, MenuItem } from "./pages";
 
 const router = createBrowserRouter([
   {
@@ -17,7 +17,7 @@ const router = createBrowserRouter([
       },
       {
         path: "menu/:name",
-        element: <div>Menu Item</div>,
+        element: <MenuItem />,
       },
     ],
   },
