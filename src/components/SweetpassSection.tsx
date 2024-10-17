@@ -10,7 +10,7 @@ const SweetpassSection = () => {
               Inside the App
             </h1>
 
-            <h2 className="text-6xl md:text-6xl font-light tracking-tight">
+            <h2 className="text-6xl font-light tracking-tight">
               Join Sweetpass
             </h2>
 
