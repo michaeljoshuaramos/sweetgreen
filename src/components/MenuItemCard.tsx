@@ -9,7 +9,7 @@ const MenuItemCard = ({ menuItem }: MenuItemCardProps) => {
     <div className="space-y-4 text-sweetgreen-green-primary group hover:cursor-pointer">
       <div className="relative overflow-hidden rounded-[36px]">
         <img
-          className="rounded-[36px] object-cover w-full h-auto transform transition duration-300 group-hover:scale-105 group-hover:brightness-90"
+          className="object-cover w-full h-auto transform transition duration-300 group-hover:scale-105 group-hover:brightness-90"
           src={menuItem.image}
           alt={menuItem.name}
         />
