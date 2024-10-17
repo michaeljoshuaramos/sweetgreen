@@ -8,9 +8,11 @@ const NewsSection = () => {
         <h1 className="text-base font-light uppercase tracking-wider">
           The Latest
         </h1>
-        <h1 className="text-base font-light uppercase tracking-wider">
-          <span>Read more →</span>
-        </h1>
+        <div className="text-base font-light uppercase tracking-wider ">
+          <a className="hover:border-b hover:border-sweetgreen-green-primary hover:cursor-pointer">
+            Read more →
+          </a>
+        </div>
       </div>
       <div className="grid grid-cols-3 gap-4 font-light">
         {news.map((newsItem) => {

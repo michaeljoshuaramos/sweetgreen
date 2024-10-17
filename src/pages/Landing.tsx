@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import sweetgreenHero from "../assets/sweetgreenHero.webp";
 import {
   Footer,
@@ -22,9 +23,13 @@ const Landing = () => {
         <h1 className="absolute bottom-56 left-24 text-7xl font-light text-white max-w-[800px]">
           Introducing the Autumn Harvest Bowl
         </h1>
-        <button className="absolute bottom-32 uppercase rounded-full left-24 px-12 py-4 tracking-wide bg-sweetgreen-neon font-light text-sweetgreen-green-primary text-xl">
-          Order Now
-        </button>
+        <Link to={"/menu"} className="group">
+          <button className="absolute bottom-32 uppercase rounded-full left-24 px-12 py-4 tracking-wide bg-sweetgreen-neon font-light text-sweetgreen-green-primary text-xl">
+            <span className="group-hover:border-b group-hover:border-sweetgreen-green-primary">
+              Order Now
+            </span>
+          </button>
+        </Link>
       </div>
       <div className="max-w-[1400px] mx-auto my-12">
         <h2 className="font-serif text-sweetgreen-green-primary text-6xl text-center">

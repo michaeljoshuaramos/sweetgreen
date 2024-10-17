@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import {
   FilterOptions,
   Footer,
@@ -25,7 +26,14 @@ const Menu = () => {
           {menu
             .filter((menuItem) => menuItem.category === category)
             .map((menuItem, index) => {
-              return <MenuItemCard key={index} menuItem={menuItem} />;
+              return (
+                <Link
+                  to={`/menu/${encodeURIComponent(menuItem.name)}`}
+                  key={index}
+                >
+                  <MenuItemCard menuItem={menuItem} />
+                </Link>
+              );
             })}
         </div>
       </div>
