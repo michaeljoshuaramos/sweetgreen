@@ -2,8 +2,8 @@ import { type News } from "../utils";
 
 const NewsCard = ({ news }: { news: News }) => {
   return (
-    <div className="bg-sweetgreen-sand rounded-3xl p-4 flex group hover:cursor-pointer">
-      <article className="text-sm">
+    <div className="bg-sweetgreen-sand rounded-3xl p-2 flex group hover:cursor-pointer justify-between">
+      <article className="text-sm p-2">
         <div className="flex flex-col h-full justify-between">
           <div>
             <span className="uppercase">{news.publisher}</span>
@@ -20,11 +20,11 @@ const NewsCard = ({ news }: { news: News }) => {
           </div>
         </div>
       </article>
-      <div className="max-w-44 overflow-hidden rounded-2xl">
+      <div className="max-w-44 overflow-hidden rounded-2xl m-2">
         <img
           src={news.image}
           alt={news.title}
-          className="object-cover w-full h-auto transform transition duration-300 group-hover:scale-110 group-hover:brightness-90"
+          className="rounded-2xl object-cover w-full h-auto transform transition duration-300 group-hover:scale-110 group-hover:brightness-90"
         />
       </div>
     </div>

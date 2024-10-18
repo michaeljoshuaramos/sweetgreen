@@ -2,11 +2,11 @@ import sweetpassProgramImage from "../assets/sweetpassProgramImage.avif";
 
 const SweetpassSection = () => {
   return (
-    <div className="grid grid-cols-2">
-      <div className="h-[800px] bg-sweetgreen-green-secondary">
-        <section className="text-sweetgreen-black py-16 px-4 md:py-24">
+    <div className="grid grid-cols-1 lg:grid-cols-2">
+      <div className="h-[600px] lg:h-[800px] bg-sweetgreen-green-secondary">
+        <section className="text-sweetgreen-black py-16 px-12 md:py-24">
           <div className="max-w-2xl mx-auto space-y-8">
-            <h1 className="text-3xl md:text-base font-normal uppercase tracking-wider">
+            <h1 className="text-base font-normal uppercase tracking-wider">
               Inside the App
             </h1>
 
@@ -25,26 +25,31 @@ const SweetpassSection = () => {
               exclusives and more.
             </p>
 
-            <div className="space-x-4">
-              <a
-                href="#"
-                className="inline-block bg-sweetgreen-yellow font-medium text-base px-6 py-3 rounded-xl hover:text-sweetgreen-yellow hover:bg-sweetgreen-green-primary transition"
-              >
-                Download for iOS
-              </a>
-              <a
-                href="#"
-                className="inline-block bg-sweetgreen-yellow font-medium text-base px-6 py-3 rounded-xl hover:text-sweetgreen-yellow hover:bg-sweetgreen-green-primary transition"
-              >
-                Download for Android
-              </a>
+            <div className="flex flex-col gap-y-4">
+              <h1 className="text-base font-normal uppercase">
+                Download The App
+              </h1>
+              <div className="flex flex-col">
+                <a
+                  href="#"
+                  className="font-light text-lg md:text-xl hover:text-sweetgreen-bg-sweetgreen-green-secondary"
+                >
+                  iOS →
+                </a>
+                <a
+                  href="#"
+                  className="font-light text-lg md:text-xl hover:text-sweetgreen-bg-sweetgreen-green-secondary"
+                >
+                  Android →
+                </a>
+              </div>
             </div>
           </div>
         </section>
       </div>
       <div>
         <img
-          className="h-[800px] w-full object-cover object-top"
+          className="h-[600px] lg:h-[800px] w-full object-cover object-top"
           src={sweetpassProgramImage}
         />
       </div>

@@ -4,9 +4,9 @@ import { menu } from "../utils";
 
 const SuggestionSection = () => {
   return (
-    <div className="max-w-[1400px] mx-auto my-20 text-sweetgreen-green-primary">
+    <div className="my-20 text-sweetgreen-green-primary px-12">
       <h2 className="text-3xl font-bold mb-4">You May Also Like</h2>
-      <div className="grid grid-cols-3 gap-[60px] my-10">
+      <div className="grid md:grid-cols-2 gap-[60px] my-10 grid-cols-1 lg:grid-cols-3">
         <Link
           to={`/menu/${encodeURIComponent(menu[0].name)}`}
           key={menu[0].name}

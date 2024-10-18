@@ -15,10 +15,10 @@ const MenuItem = () => {
   }
 
   return (
-    <>
+    <div>
       <MenuItemDetails menuItem={menuItem} />
       <SuggestionSection />
-    </>
+    </div>
   );
 };
 

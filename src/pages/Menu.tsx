@@ -9,15 +9,15 @@ const Menu = () => {
   >("Bowls");
 
   return (
-    <div>
+    <div className="px-12">
       <div className="text-center my-16">
-        <h1 className="text-7xl font-serif text-sweetgreen-green-primary">
+        <h1 className="text-4xl md:text-5xl lg:text-7xl font-serif text-sweetgreen-green-primary">
           Fresh, plant-forward, earth friendly food.
         </h1>
       </div>
       <div className="max-w-[1400px] mx-auto my-12">
         <FilterOptions category={category} setCategory={setCategory} />
-        <div className="grid grid-cols-3 gap-[60px] my-12">
+        <div className="grid md:grid-cols-2 gap-[60px] my-12 grid-cols-1 lg:grid-cols-3">
           {menu
             .filter((menuItem) => menuItem.category === category)
             .map((menuItem, index) => {
