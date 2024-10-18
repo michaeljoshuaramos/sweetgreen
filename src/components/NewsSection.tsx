@@ -3,7 +3,7 @@ import { news } from "../utils";
 
 const NewsSection = () => {
   return (
-    <div className="max-w-[1400px] mx-auto my-12 text-sweetgreen-green-black">
+    <div className="max-w-[1400px] mx-auto my-12 text-sweetgreen-green-black px-12">
       <div className="flex justify-between mb-4">
         <h1 className="text-base font-light uppercase tracking-wider">
           The Latest
@@ -14,7 +14,7 @@ const NewsSection = () => {
           </a>
         </div>
       </div>
-      <div className="grid grid-cols-3 gap-4 font-light">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 font-light">
         {news.map((newsItem) => {
           return <NewsCard key={newsItem.title} news={newsItem} />;
         })}

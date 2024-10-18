@@ -16,15 +16,17 @@ const FilterOptions = ({ category, setCategory }: FilterOptionsProps) => {
     <div className="flex space-x-4">
       {filters.map((filter, index) => {
         const isActive = category === filter;
+        console.log(category, filter);
 
         return (
           <button
             key={index}
             onClick={() => setCategory(filter)}
-            className={`px-4 py-2 bg-sweetgreen-green-tertiary text-sweetgreen-green-primary text-sm font-medium rounded-full 
+            className={`px-4 py-2 text-sm font-medium rounded-full 
                 ${isActive && "bg-sweetgreen-green-primary text-white"}
                 ${
-                  !isActive && "hover:bg-sweetgreen-green-secondary transition"
+                  !isActive &&
+                  "bg-sweetgreen-green-tertiary text-sweetgreen-green-primary hover:bg-sweetgreen-green-secondary transition"
                 }`}
           >
             {filter}

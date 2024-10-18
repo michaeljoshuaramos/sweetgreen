@@ -2,21 +2,18 @@ import sweetgreenWorkImage from "../assets/sweetgreenWorkImage.avif";
 
 const SweetgreenWorkSection = () => {
   return (
-    <div className="grid grid-cols-2 bg-sweetgreen-green-tertiary h-[800px]">
-      <div className="flex items-center justify-center">
-        <img
-          className="h-[700px] w-[700px] rounded-3xl"
-          src={sweetgreenWorkImage}
-        />
+    <div className="grid grid-cols-1 lg:grid-cols-2 bg-sweetgreen-green-tertiary">
+      <div className="flex items-center justify-center p-12">
+        <img className="rounded-3xl" src={sweetgreenWorkImage} />
       </div>
       <div>
-        <section className="text-sweetgreen-black py-16 px-4 md:py-24">
+        <section className="text-sweetgreen-black p-12">
           <div className="max-w-2xl mx-auto space-y-8">
-            <h1 className="text-3xl md:text-base font-normal uppercase tracking-wider">
+            <h1 className="text-base font-normal uppercase tracking-wider">
               Sweetgreen for Work
             </h1>
 
-            <h2 className="text-6xl md:text-6xl font-light tracking-tight">
+            <h2 className="text-4xl md:text-6xl font-light tracking-tight">
               All the ways we keep your workplace working
             </h2>
 

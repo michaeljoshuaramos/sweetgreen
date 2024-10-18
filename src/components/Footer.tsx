@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <div className="bg-sweetgreen-green-tertiary font-light text-sm">
       <footer className="max-w-[1400px] mx-auto">
-        <div className="grid grid-cols-6 gap-[60px] py-12">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 gap-[60px] p-12">
           <div>
             <p className="uppercase mb-4">{footer[0].category}</p>
             {footer[0].links.map((link) => (

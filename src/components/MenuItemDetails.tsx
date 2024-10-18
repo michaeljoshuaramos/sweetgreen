@@ -1,4 +1,10 @@
-import { useState } from "react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import { Link } from "react-router-dom";
 import peopleImage from "../assets/peopleImage.avif";
 import sweetgreenWorkImage from "../assets/sweetgreenWorkImage.avif";
@@ -10,29 +16,12 @@ type MenuItemDetailsProps = {
 
 const MenuItemDetails = ({ menuItem }: MenuItemDetailsProps) => {
   const images = [menuItem.image, sweetgreenWorkImage, peopleImage];
-  const [imageIndex, setImageIndex] = useState(0);
-
-  const handlePrev = () => {
-    if (imageIndex - 1 === -1) {
-      return;
-    }
-
-    setImageIndex(imageIndex - 1);
-  };
-
-  const handleNext = () => {
-    if (imageIndex + 1 === images.length) {
-      return;
-    }
-
-    setImageIndex(imageIndex + 1);
-  };
 
   return (
     <div>
-      <div className="grid grid-cols-2 gap-8 my-12">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 my-12 max-w-[1400px] mx-auto">
         {/* Left side: product details */}
-        <div className="text-sweetgreen-green-primary ml-32 mr-16 flex flex-col justify-between pb-8 pt-4">
+        <div className="text-sweetgreen-green-primary px-16 flex flex-col justify-between pt-4">
           <div>
             <div className="text-base font-light uppercase tracking-wider mb-8">
               <Link
@@ -62,39 +51,23 @@ const MenuItemDetails = ({ menuItem }: MenuItemDetailsProps) => {
           </div>
         </div>
 
-        {/* Right side: carousel */}
-        <div className="relative w-full h-[500px] overflow-hidden">
-          <div className="flex space-x-4">
-            <div className="flex space-x-4">
-              {/* Fixed-size images */}
+        <div className="flex justify-center px-16 pt-8">
+          <Carousel className="max-w-[400px] ">
+            <CarouselContent>
               {images.map((image, index) => {
                 return (
-                  <div
-                    key={index}
-                    className="relative min-w-[500px] h-[500px] flex space-x-4 transition-transform duration-200 ease-in-out"
-                    style={{ transform: `translateX(-${imageIndex * 516}px)` }} // Shift images based on current index
-                  >
+                  <CarouselItem key={index} className="max-h-[400px]">
                     <img
                       className="rounded-[36px] object-cover w-full h-full"
                       src={image}
                     />
-                  </div>
+                  </CarouselItem>
                 );
               })}
-            </div>
-            <div
-              onClick={handlePrev}
-              className="hover:cursor-pointer absolute top-[436px] left-[420px] bg-sweetgreen-yellow w-[64px] h-[64px] flex items-center justify-center rounded-tl-3xl"
-            >
-              <button className="text-3xl font-light">←</button>
-            </div>
-            <div
-              onClick={handleNext}
-              className="hover:cursor-pointer absolute top-[436px] left-[500px] bg-sweetgreen-yellow w-[64px] h-[64px] flex items-center justify-center rounded-tr-3xl"
-            >
-              <button className="text-3xl font-light">→</button>
-            </div>
-          </div>
+            </CarouselContent>
+            <CarouselPrevious className="bg-sweetgreen-green-primary text-white w-10 h-10" />
+            <CarouselNext className="bg-sweetgreen-green-primary text-white w-10 h-10" />
+          </Carousel>
         </div>
       </div>
     </div>

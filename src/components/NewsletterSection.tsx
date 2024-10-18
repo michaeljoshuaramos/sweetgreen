@@ -2,8 +2,8 @@ const NewsletterSection = () => {
   return (
     <div className="border-t border-sweetgreen-black text-sweetgreen-black">
       <div className="max-w-[1400px] mx-auto">
-        <div className="grid grid-cols-2">
-          <div className="border-r border-sweetgreen-black py-12 flex flex-col gap-y-4">
+        <div className="grid grid-cols-1 md:grid-cols-2">
+          <div className="border-b border-sweetgreen-black md:border-sweetgreen-black md:border-r md:border-b-0 p-12 flex flex-col gap-y-4">
             <h1 className="text-base font-light uppercase">
               Join Our Newsletter
             </h1>
