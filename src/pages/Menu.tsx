@@ -7,7 +7,7 @@ const Menu = () => {
   const [category, setCategory] = useState<
     "Bowls" | "Protein Plates" | "Salads"
   >("Bowls");
-  console.log(category);
+
   return (
     <div>
       <div className="text-center my-16">
