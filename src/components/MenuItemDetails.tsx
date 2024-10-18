@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import peopleImage from "../assets/peopleImage.avif";
 import sweetgreenWorkImage from "../assets/sweetgreenWorkImage.avif";
@@ -8,6 +9,25 @@ type MenuItemDetailsProps = {
 };
 
 const MenuItemDetails = ({ menuItem }: MenuItemDetailsProps) => {
+  const images = [menuItem.image, sweetgreenWorkImage, peopleImage];
+  const [imageIndex, setImageIndex] = useState(0);
+
+  const handlePrev = () => {
+    if (imageIndex - 1 === -1) {
+      return;
+    }
+
+    setImageIndex(imageIndex - 1);
+  };
+
+  const handleNext = () => {
+    if (imageIndex + 1 === images.length) {
+      return;
+    }
+
+    setImageIndex(imageIndex + 1);
+  };
+
   return (
     <div>
       <div className="grid grid-cols-2 gap-8 my-12">
@@ -44,34 +64,35 @@ const MenuItemDetails = ({ menuItem }: MenuItemDetailsProps) => {
 
         {/* Right side: carousel */}
         <div className="relative w-full h-[500px] overflow-hidden">
-          <div className="flex space-x-4 transition-transform duration-500 ease-in-out">
-            {/* Fixed-size images */}
-            <div className="relative min-w-[500px] h-[500px] overflow-hidden rounded-[36px]">
-              <img
-                className="object-cover w-full h-full"
-                src={menuItem.image}
-                alt={menuItem.name}
-              />
-              <div className="absolute top-[436px] left-[436px] bg-sweetgreen-yellow w-[64px] h-[64px] flex items-center justify-center rounded-tl-3xl">
-                <p className="text-3xl font-light">←</p>
-              </div>
+          <div className="flex space-x-4">
+            <div className="flex space-x-4">
+              {/* Fixed-size images */}
+              {images.map((image, index) => {
+                return (
+                  <div
+                    key={index}
+                    className="relative min-w-[500px] h-[500px] flex space-x-4 transition-transform duration-200 ease-in-out"
+                    style={{ transform: `translateX(-${imageIndex * 516}px)` }} // Shift images based on current index
+                  >
+                    <img
+                      className="rounded-[36px] object-cover w-full h-full"
+                      src={image}
+                    />
+                  </div>
+                );
+              })}
             </div>
-            <div className="relative min-w-[500px] h-[500px] overflow-hidden rounded-[36px]">
-              <img
-                className="object-cover w-full h-full"
-                src={sweetgreenWorkImage}
-                alt="Sweetgreen Work"
-              />
-              <div className="absolute top-[436px] left-0 bg-sweetgreen-yellow w-[64px] h-[64px] flex items-center justify-center rounded-tr-3xl">
-                <p className="text-3xl font-light">→</p>
-              </div>
+            <div
+              onClick={handlePrev}
+              className="hover:cursor-pointer absolute top-[436px] left-[420px] bg-sweetgreen-yellow w-[64px] h-[64px] flex items-center justify-center rounded-tl-3xl"
+            >
+              <button className="text-3xl font-light">←</button>
             </div>
-            <div className="relative min-w-[500px] h-[500px] overflow-hidden rounded-[36px]">
-              <img
-                className="object-cover w-full h-full"
-                src={peopleImage}
-                alt="People"
-              />
+            <div
+              onClick={handleNext}
+              className="hover:cursor-pointer absolute top-[436px] left-[500px] bg-sweetgreen-yellow w-[64px] h-[64px] flex items-center justify-center rounded-tr-3xl"
+            >
+              <button className="text-3xl font-light">→</button>
             </div>
           </div>
         </div>
