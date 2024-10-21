@@ -1,8 +1,8 @@
 # Sweetgreen
 
-![image](https://github.com/user-attachments/assets/6e2d727d-3fe6-4aa9-8cad-f9eef8e77b68)
+![GitHub - Sweetgreen 1](https://github.com/user-attachments/assets/2471e0b3-4f8e-4359-8ed8-3639fc96fab0)
 
-![image](https://github.com/user-attachments/assets/3ea3cfc2-3f03-4038-85c7-085b28d9ad4b)
+![GitHub - Sweetgreen 2](https://github.com/user-attachments/assets/ee39f18f-9c62-4129-8ece-7a88af480ede)
 
 Sweetgreen is an e-commerce website, created as a personal project to enhance my frontend development skills. This is a personal project adapted to showcase and practice modern frontend technologies.
 
