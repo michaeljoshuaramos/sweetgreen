@@ -12,6 +12,7 @@ const MenuItemCard = ({ menuItem }: MenuItemCardProps) => {
           className="object-cover w-full h-auto transform transition duration-300 group-hover:scale-105 group-hover:brightness-90"
           src={menuItem.image}
           alt={menuItem.name}
+          loading="lazy"
         />
       </div>
       <div className="pt-3 space-y-2">

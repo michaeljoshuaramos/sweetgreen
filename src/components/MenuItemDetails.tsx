@@ -5,9 +5,12 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import peopleImage from "../assets/peopleImage.avif";
 import sweetgreenWorkImage from "../assets/sweetgreenWorkImage.avif";
+import { addItem } from "../features/cart/cartSlice";
+import { useToast } from "../hooks/use-toast";
 import { formatAsDollars, type MenuItem } from "../utils";
 
 type MenuItemDetailsProps = {
@@ -16,6 +19,13 @@ type MenuItemDetailsProps = {
 
 const MenuItemDetails = ({ menuItem }: MenuItemDetailsProps) => {
   const images = [menuItem.image, sweetgreenWorkImage, peopleImage];
+  const dispatch = useDispatch();
+  const { toast } = useToast();
+
+  const addToCart = () => {
+    dispatch(addItem(menuItem));
+    toast({ title: "Item added to cart!", description: menuItem.name });
+  };
 
   return (
     <div>
@@ -43,8 +53,11 @@ const MenuItemDetails = ({ menuItem }: MenuItemDetailsProps) => {
               <span className="font-semibold">Ingredients: </span>
               {menuItem.ingredients}
             </p>
-            <button className="rounded-full px-10 py-4 tracking-wide bg-sweetgreen-green-primary font-semibold text-white text-base">
-              <span className="group-hover:border-b group-hover:border-sweetgreen-green-primary">
+            <button
+              className="rounded-full px-10 py-4 tracking-wide bg-sweetgreen-green-primary font-semibold text-white text-base group"
+              onClick={addToCart}
+            >
+              <span className="group-hover:border-b group-hover:border-white">
                 Add to Cart — {formatAsDollars(menuItem.price)}
               </span>
             </button>
